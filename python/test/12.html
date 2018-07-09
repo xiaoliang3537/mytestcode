@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>Best.bi - 自由安全，值得信赖的比特币区块链数字资产交易平台，支持BTC、ETH、BCH、LTC、EOS、BTM等多种数字货币交易</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />-->
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="/assets/xx/css/bootstrap.css" />
+		<link rel="stylesheet" href="/assets/xx/css/font-awesome.css" />
+		<!-- text fonts -->
+		<link rel="stylesheet" href="/assets/xx/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="/assets/xx/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+	</head>
+
+<style type="text/css">
+	body { background:#F8F9FA !important; font-family:"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei","\5B8B\4F53";}
+	.houtsidewrap { /*max-width: 1200px;*/ margin: 0 auto; }
+	table.dataTable { clear: both; max-width: 1200px; margin: 0 auto;}
+	.backgfff { background: #ffffff !important; color: #999999;  }
+	.backg666 { background: #f6f6f6 !important; color: #999999;  }
+	#navbar { max-width: 1200px;margin: 0 auto; }
+
+	#navbar { padding:15px 0; }
+	.navbar .navbar-nav > li > a:hover { background-color:#232731 !important; color:#ffffff !important;}
+	#navbar { background: #232731;color: #666; }
+	#navbar a { color: #999999;font-size: 16px; }
+	.ace-nav > li > a,.ace-nav > li > a:hover { background:none; }
+	.nav .open > a:focus { background-color:#232731; border-color:#232731; }
+    .ace-nav > li > a:hover, .ace-nav > li > a:focus, .ace-nav > li.open > a { background-color:#232731; color:#232731; }
+	.ace-nav > li > a:hover { background:#ff5818; }
+	#xx_index_menu { font-size: 16px; }
+	a#xx_index_menu_hover { color: #e6e6e6;border-bottom: 2px #e6e6e6 solid; }
+	.ace-nav > li.open > a  { background-color: #232731; }
+	.navbar #xx_index_menu li { border-left:none;border-right:none;float:left; }
+	#xx_index_logoid { background: url('/logo2.png') no-repeat;text-indent:-9999px;width:200px;height:45px; }
+	#index_banner_Id { background: url('./banner.png')  no-repeat;height:380px; background-position:center;}
+	#index_login_box_id { /*opacity: 0.6;*/margin-top:90px;margin-right:80px;border: none; }
+	#index_login_box_id input { width:230px; }
+	#index_login_box_id .widget-main .lbl { color: #fff;  }
+
+	#sample-table-2_wrapper td,#sample-table-2_wrapper th { border: none;padding:10px; }
+
+
+	.index_news_id h2 { text-align: center;font-size: 18px; }
+	.section-title { text-align: center; font-family:Microsoft Yahei; color:#4A4A4A !important; }
+	.index_news_id p { position: relative; }
+	.index_news_id p span { position:absolute;right: 20px; }
+	.index_news_id .col-sm-3 { text-align: center; width: 33%; }
+	/* .index_news_id .index_news_has_border { border-right: 1px solid #ccc; } */
+
+	.footer_link_class { float: right;/*width: 100%;padding: 0;margin: 0;text-align: center;*/ }
+	.footer_link_class li { padding: 20px 0 20px 20px;color: #fff;list-style: none;display: inline-block; }
+	.footer .footer-inner .footer-content { border: none; }
+	#footer_div_id hr { width: 100%;margin: 0;padding: 0;border-color: #666;}
+	.index_news_id hr{ border-top: 1px dashed #ddd;  }
+	.footer_link_class_li0 { padding-left: 10px; }
+	.footer_ba_div { color: #fff;text-align: center;margin-top: 10px; }
+	.footer_link_classl { /*background: #eee;*/padding:10px 0; }
+	.footer_link_classl li { color: #666; }
+	.footer_div_logo { position: absolute;top: 15px;left:1px }
+
+
+	/* charge page */
+	.charge_bread_price { position: relative;height: 56px;padding-top:7px;background: #eee; }
+	.charge_bread_price ul li { display: inline-block;margin-left: 132px;vertical-align: middle;font-size: 14px;text-align: left; }
+	.charge_bread_price .charge_bread_price_h { position: absolute;left: 10px;padding-left:30px;background: url('/assets/xx/avatars/avatar.png') no-repeat; }
+	.charge_bread_price .charge_bread_price_h ul li { margin-left: 5px;height: 100%;width: 122px; }
+	.charge_bread_price_ico {font-size: 12px;position:absolute;top: 25px;width: 60px;left: 0;}
+	.setbuysaildiv .widget-box { width:100%;margin-top:12px; }
+	.setbuysaildiv .widget-box .input-group { width:100%; }
+	.setbuysaildiv .widget-box button { width:100%; }
+	.setbuysaildiv input { text-align: right; }
+	.nav-pills .hk-active { border-bottom: 0px solid #e8bd80; }
+	.nav-pills a { color: #777; }
+	.nav-pills .hk-active a { color: #808080; background-color: #e7ecf0;}
+	.chargecashlist { height: 305px;margin-bottom: 10px !important;overflow: hidden; }
+	.chargecashlist th, .chargecashlist td { border: none !important;padding-top: 0 ; padding-bottom: 0;height: 25px;line-height: 25px; }
+	.chargecashlist_a { background: #fdf2ea; }
+	.tabledotted td, .tabledotted th { border-top: 1px dashed #ddd !important; }
+	.user-menu > li > a > .ace-icon { font-size: 100%; }
+	.ace-nav .user-menu > li > a { padding-top: 8px; padding-bottom: 8px;}
+	.dropdown-menu > li > a { padding-left: 20px;}
+	.dropdown-menu .divider { margin:1px 0;}
+
+    /* login page*/
+    div.error { color:red;font-size:12px;display:block;text-align:right; }
+    span.error { font-size:12px;color:red }
+    .fileinfo { display:none; }
+    .light-login { background:none; }
+    .light-login .widget-main { background:#fff !important; }
+    .login-layout { margin-top:80px;margin-bottom:80px; }
+
+    a:hover { text-decoration:none !important; }
+
+</style>
+	<body class="no-skin">
+		<div style="display:none;width:100%;background: #000;color: #fff;padding:3px 0;padding-left: 18px;"></div>
+		<!-- #section:basics/navbar.layout -->
+        <div style="background:#232731;border-bottom: 2px solid #ff5818;">
+            <div id="navbar" class="navbar navbar-default">
+                <script type="text/javascript">
+                    try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+                </script>
+
+                <div class="navbar-container" id="navbar-container">
+                    <div class="navbar-header pull-left">
+                        <!-- #section:basics/navbar.layout.brand -->
+                        <a href="/" class="navbar-brand" id="xx_index_logoid">
+                            <small>Best.Bi - 自由安全快速，值得信赖的比特币OTC场外交易平台，支持BTC、ETH、BCH、LTC、EOS、BTM等多种数字货币交易</small>
+                        </a>
+                    </div>
+                    <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                        <ul class="nav ace-nav" style="display: block;" >
+                            <!-- #section:basics/navbar.user_menu -->
+                                <!--                            <li><a href="--><!--">登录/注册</a></li>-->
+                                <li><button class="btn btn-info" style="background-color:#232731 !important; border-color:#ff7133; border:1px solid #ff7133; color:#ff7133 !important;" onclick="window.location.href='/site/login'">登錄</button>
+                                    <button class="btn btn-info" style="background-color:#232731 !important; border-color:#ff7133; border:1px solid #ff7133; color:#ff7133 !important;" onclick="window.location.href='/site/register'">註冊</button>
+                                </li>
+                                                        <!-- /section:basics/navbar.user_menu -->
+                        </ul>
+                    </div>
+
+                    <nav role="navigation" class="navbar-menu pull-left navbar-collapse">
+                        <!-- #section:basics/navbar.nav -->
+                        <ul class="nav navbar-nav" id="xx_index_menu">
+                            <li><a href="/" id="xx_index_menu_hover" >首頁</a></li>
+                            <!--						<li><a href="--><!--">交易中心</a></li>-->
+                            <li><a  href="/site/buy">購買</a></li>
+                            <li><a  href="/site/sell">出售</a></li>
+                            <li><a  href="/site/issue">發布廣告</a></li>
+                            <li><a  href="/site/invent">邀請好友</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- /section:basics/navbar.dropdown -->
+                </div><!-- /.navbar-container -->
+            </div>
+        </div>
+		
+		<style type="text/css">
+    .light-login .widget-main { background:#ffffff !important; }
+	.light-login .widget-box.signup-box  { background-color:#000000; }
+	.header.green { border-bottom-color:#000000; }
+	.green { color:#5a5a5a !important ;}
+    h4.bigger {font-size: 18px;  font-family: Microsoft Yahei; font-weight: 500;}
+	.btn-success, .btn-success:focus {background-color: #56af48 !important;  border-color: #56af48;}
+	.btn  { color:#ffffff !important; }
+	.btn-info { background-color:#72d263 !important; border-color:#72d263; }
+	.btn-info:hover { background-color:#5db94f !important; border-color:#5db94f; }
+	.width-65 { width:100% !important ; }
+	.space-24 { max-height:1px ; min-height:1px;   overflow:hidden;    margin: 12px 0; }
+    .signup-box .toolbar { border-top:1px solid #e7e8e9;   padding:9px 18px; }
+	.blue { color:#4a4a4a !important; }
+	.btn-primary, .btn-primary:focus { background-color:#ff5818 !important;  border-color:#ff5818}
+
+	.login-box .toolbar  { border-top:1px solid #e7e8e9; }
+	.forgot-box .back-to-login-link, .signup-box .back-to-login-link { color:#2fac6a; font-size:14px; font-weight:500; }
+	.login-layout .widget-box .widget-body .toolbar > div > a  { color:#2fac6a; font-size:14px; font-weight:500; text-shadow:0px 0px 0px rgba(0, 0, 0, 0.25); }
+	.login-box .forgot-password-link  { color:#555555; }
+	.login-box .user-signup-link  { color:#2fac6a; }
+	.input-icon.input-icon-right > input  { background-color:#f3f3f3; }
+	.header  { border-bottom:0px solid #CCC; }
+	.user-link{color:#777777;  margin:0  11px 0 10px;}
+	input[readonly]{ background:#ffffff  !important; }
+	.light-login .widget-box { padding:0px 0px 0; border-bottom:0px solid rgba(50, 50, 50, 0.33); box-shadow:0 2px 4px 0 rgba(155,155,155,0.44); }
+	</style>
+
+<div class="row login-layout light-login">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="login-container">
+
+            <div class="space-6"></div>
+
+            <div class="position-relative">
+                <div id="login-box" class="login-box widget-box no-border visible">
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <h4 class="header blue lighter bigger">
+                                <i class="ace-icon fa fa-coffee green"></i>
+                                登&nbsp录
+                            </h4>
+
+                            <div class="space-6"></div>
+
+                            <form method="post" id="login_form" novalidate="novalidate" action="/site/login">
+                                <fieldset>
+                                    <label class="block clearfix">
+                                            <span class="block input-icon input-icon-right">
+                                                <input type="text" name="username" class="form-control" placeholder="邮箱或手机号码">
+                                                <i class="ace-icon fa fa-user"></i>
+                                            </span>
+                                    </label>
+
+                                    <label class="block clearfix">
+                                            <span class="block input-icon input-icon-right">
+                                                <input type="password" name="password" class="form-control" placeholder="密码">
+                                                <i class="ace-icon fa fa-lock"></i>
+                                            </span>
+                                    </label>
+
+                                    <div class="space"></div>
+
+                                    <div class="clearfix">
+
+
+                                        <button type="submit" class="width-65 pull-right btn btn-sm btn-primary">
+                                            <i class="ace-icon fa fa-key"></i>
+                                          <!--  <span class="bigger-110">维护中暂停登录</span>-->
+										<span class="bigger-110">登&nbsp&nbsp&nbsp录</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="space-4"></div>
+                                </fieldset>
+                            </form>
+                        </div><!-- /.widget-main -->
+
+                      <div class="toolbar clearfix">
+                              <div>
+                                <a href="javascript:;" data-target="#forgot-box" class="forgot-password-link" style="color:#ddd;">
+                                    <i class="ace-icon fa fa-arrow-left"></i>
+                                    忘记密码？
+                                </a>
+                            </div>
+
+                            <div>
+							<p class="user-link" >还没有账号？
+                                <a href="/site/register" data-target="#signup-box" class="user-signup-link">
+                                    立即注册
+                                    <i class="ace-icon fa fa-arrow-right"></i>
+                                </a></p>
+                            </div>
+                        </div>
+                    </div><!-- /.widget-body -->
+                </div><!-- /.login-box -->
+
+                <div id="forgot-box" class="forgot-box widget-box no-border">
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <h4 class="header red lighter bigger">
+                                <i class="ace-icon fa fa-key"></i>
+                                找回密码
+                            </h4>
+
+                            <div class="space-6"></div>
+                            <p>
+                                通过邮箱找回密码，输入注册时填写的邮箱
+                            </p>
+
+                            <form method="post" action="/site/getback0" id="getback_form" novalidate="novalidate">
+                                <fieldset>
+                                    <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" name="email" class="form-control" placeholder="Email">
+															<i class="ace-icon fa fa-envelope"></i>
+														</span>
+                                    </label>
+
+                                    <div class="clearfix">
+                                        <button type="submit" class="width-35 pull-right btn btn-sm btn-danger">
+                                            <i class="ace-icon fa fa-lightbulb-o"></i>
+                                            <span class="bigger-110">发送邮件!</span>
+                                        </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div><!-- /.widget-main -->
+
+                        <div class="toolbar center">
+						<p>已经有账号？
+                            <a href="#" data-target="#login-box" class="back-to-login-link">
+                                立即登录
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a></p>
+                        </div>
+                    </div><!-- /.widget-body -->
+                </div><!-- /.forgot-box -->
+
+                <div id="signup-box" class="signup-box widget-box no-border  ">
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <h4 class="header green lighter bigger">
+                                <i class="ace-icon fa fa-users blue"></i>
+                                邮箱注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="font-size: 15px;color: #adadad;" href="/site/register?reg_type=phone">手机注册</a>
+								<br><span style="font-size: 15px;">（若不显示邮件可去垃圾箱查看是否被拦截）</span>
+                            </h4>
+                                    <label class="block">  <input name="fromid" value="" readonly="readonly" style="width:50px;border:none;"/>邀请你注册全民持股交易平台Best.bi<p style="color: #ff712f;">恭喜你获得<span style="font-size: 22px;color: #ff712f;">2500 BTB</span> point 立即注册领取</p></label>
+                            <div class="space-6"></div>
+
+                            <form method="post" id="register_form" action="/site/register" novalidate="novalidate">
+                                <input type="hidden" name="fromid" value="" readonly="readonly" style="width:30px;border:none;"/>
+                                <input type="hidden" name="reg_phone" value="email"/>
+                                <fieldset>
+<!--                                    <label class="block clearfix">-->
+<!--                                        <span class="block input-icon input-icon-right">-->
+<!--                                            <input type="email" name="email" class="form-control" placeholder="Email">-->
+<!--                                            <i class="ace-icon fa fa-envelope"></i>-->
+<!--                                        </span>-->
+<!--                                    </label>-->
+
+                                    <label class="block clearfix">
+                                        <span class="block input-icon input-icon-right">
+                                            <input type="text" name="cellphone" class="form-control" placeholder="邮箱地址">
+                                            <i class="ace-icon fa fa-user"></i>
+                                        </span>
+                                    </label>
+
+                                    <label class="block clearfix">
+                                        <span class="block input-icon input-icon-right">
+                                            <input type="text" name="snscode" class="form-control" placeholder="输入验证码" style="width:150px;display:inline;">
+                                                <button name="snscodebutton" class="btn btn-info" type="button" style="border-radius:3px;height: 34px;line-height: 1.5px;width: 148px;">
+                                                <!-- <i class="ace-icon fa fa-check bigger-110"></i>-->
+                                                获取邮箱验证码
+                                            </button>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name="asdf4asd" value="0506248eb59672f77f32fb67bd63ff5e"/> 
+                                    <input type="hidden" name="asdf34rwerwqerasd" value="6a71b02fa8b5d68b54ab8cae78281b31"/>
+
+
+                                    <label class="block clearfix">
+                                        <span class="block input-icon input-icon-right">
+                                            <input type="password" name="password" class="form-control" placeholder="密码">
+                                            <i class="ace-icon fa fa-lock"></i>
+                                        </span>
+                                    </label>
+
+                                    <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" name="re_password" class="form-control" placeholder="确认密码">
+															<i class="ace-icon fa fa-lock"></i>
+														</span>
+                                    </label>
+
+                                    <!--<label class="block">
+                                        <input type="checkbox" class="ace">
+                                        <span style="color: #999;" class="lbl">
+															我接受
+															<a style="color: #e8bd80;" href="#">用户协议</a>
+														</span>
+                                    </label>-->
+
+                                    <div class="space-12"></div>
+
+                                    <input type="hidden" name="bb" value="0506248eb59672f77f32fb67bd63ff5e"/>
+                                    <div class="space-24"></div>
+
+                                    <div class="clearfix">
+
+                                        <button id="myButton" type="submit" class="width-65 pull-right btn btn-sm btn-success">
+                                            <!-- <span  disabled class="bigger-110">维护中暂停注册</span>-->
+											<span class="bigger-110">接受邀请，立即注册领糖果</span>
+
+                                            <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                                        </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <div class="toolbar center">
+						
+						<p>已经有账号？
+                            <a href="#" data-target="#login-box" class="back-to-login-link">
+                                <i class="ace-icon fa fa-arrow-left"></i>
+                                立即登录
+                            </a></p>
+                        </div>
+                    </div><!-- /.widget-body -->
+                </div><!-- /.signup-box -->
+            </div><!-- /.position-relative -->
+        </div>
+    </div><!-- /.col -->
+</div>		
+		
+        <div style="background:#232731;width:100%;">
+		<hr>
+            <div class="houtsidewrap" id="footer_div_id" style="background: #232731;height:100px;max-width:1200px;">
+                <div style="position: relative;">
+				
+                        <div class="footer_div_logo"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1271639416'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/stat.php%3Fid%3D1271639416%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script><!--<img src="/logo.png">--></div>
+						
+                        <ul class="footer_link_class footer_link_classl"><li>关于Best.Bi</li><li>联系我们</li><li>用户协议</li><li>註冊指南</li><li>费率说明</li><li>帮助中心</li></ul>
+                       <!--<hr>--> 
+                </div>
+
+                <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse display">
+                    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+                </a>
+            </div>
+        </div>
+
+<style type="text/css">.sidebar_button_ a,.sidebar_button_ a:hover { color:#fff;text-decoration:none; }</style>
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='/assets/xx/js/jquery.js'>"+"<"+"/script>");
+		</script>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='/assets/xx/js/jquery1x.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='/assets/xx/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+		</script>
+		<script src="/assets/xx/js/bootstrap.js"></script>
+		<script src="/assets/xx/js/ace/ace.js"></script>
+		<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+	</body>
+
+
+
+            <script type="text/javascript" src="/assets/xx/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="/assets/xx/js/login.js"></script>
+                                    <script src="/assets/xx/js/h_register_email.js"></script>
+            
+
+
+    </html>

@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+# -*- coding: utf-8
+
+
+class Fileoper(object):
+    len  = 0
+    file = ''
+    info = ''
+    def __init__(self):
+        self.file = "b"
+        self.info = "a"
+        self.len = 0
+        pass
+
+    def getinfo(self):
+        print self.file
+
+    def __str__(self):
+        return "this is test info [%s]" % self.file
+
+    def getlen(self):
+        print self.len
+
+    def pasfile(self, filename):
+        self.file = filename
+        
+        fileinfo = open(filename, "r")
+        for line in fileinfo:
+            print line.strip()
+        
+        print fileinfo.readline()
+        print fileinfo.name
+        print fileinfo.mode
+        
+        
+if __name__ == "__main__": 
+    op = Fileoper()
+    op.pasfile("E:\\code\\python\\2017-12-25.log")
+    
+    
