@@ -1,1 +1,2 @@
-dllע����룬���ָ�����̽���dllע�룬Hook�������õ���dllԶ��ע��ķ�ʽ��ͨ����дһ������dll����dll��InitInstance()�����м��ؼ���ϵͳapi��ַ���Զ���ĺ�����ַͷ��ת�������к�������ת
+# dll注入相关代码
+#### dll注入代码，针对指定进程进行dll注入，Hook技术采用的是dll远程注入的方式，通过编写一个钩子dll，在dll的InitInstance()函数中加载加载系统api地址与自定义的函数地址头的转换来进行函数的跳转
