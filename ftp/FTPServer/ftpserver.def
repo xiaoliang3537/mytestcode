@@ -1,0 +1,8 @@
+LIBRARY	"ftpserver"
+
+
+EXPORTS
+        StartFtpServer                                  @1
+        StopFtpServer                                   @2
+        AddFtpUser                                      @3
+
