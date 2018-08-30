@@ -1,0 +1,3 @@
+# detours方式进行API HOOK
+
+针对windows下GDI部分接口，windows消息通讯部分接口的hook，socket通讯的部分接口
