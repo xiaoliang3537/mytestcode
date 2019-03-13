@@ -1,0 +1,19 @@
+1,打开页面：http://ftp.gnu.org/gnu/autoconf下载autoconf-2.69.tar.gz
+或者
+输入命令：wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz 下载autoconf安装包
+
+2，解压 进入解压目录并执行 ./configure
+
+3， make;make install
+
+安装 automake
+
+1， 打开页面：http://ftp.gnu.org/gnu/automake
+或者
+输入命令：wget http://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz下载autoconf安装包
+
+2，解压执行 ./bootstrap.sh  ./configure
+
+3， make;make install
+
+4， 检查是否安装正常 automake --version

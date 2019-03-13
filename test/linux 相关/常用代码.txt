@@ -1,0 +1,3 @@
+去掉文本中 \r 在shell中因为\r符号影响脚本解析
+sed -i 's/\r$//' <filename> 
+

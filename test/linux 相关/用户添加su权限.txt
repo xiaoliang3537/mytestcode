@@ -1,0 +1,23 @@
+现在要让jack用户获得sudo使用权
+1.切换到超级用户root
+   $su root
+2.查看/etc/sudoers权限，可以看到当前权限为440
+   $ ls -all /etc/sudoers
+   -r--r----- 1 root root 744  6月  8 10:29 /etc/sudoers
+3.更改权限为777
+   $chmod 777 /etc/sudoers
+4.编辑/etc/sudoers
+   $vi /etc/sudoers
+5.在root    ALL=(ALL:ALL) ALL 下面添加一行
+   jack    ALL=(ALL)ALL
+   然后保存退出。
+   第一个ALL是指网络中的主机，我们后面把它改成了主机名，它指明jack可以在此主机上执行后面的命令。
+   第二个括号里的ALL是指目标用户，也就是以谁的身份去执行命令。
+   最后一个ALL当然就是指命令名了。
+   具体这里不作说明
+
+   esc   wq!
+6.把/etc/sudoers权限改回440
+   $chmod 440 /etc/sudoers
+
+7.操作完成，切换到jack用户测试一下

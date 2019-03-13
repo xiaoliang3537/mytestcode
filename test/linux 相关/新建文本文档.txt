@@ -1,0 +1,38 @@
+./Configure -des -Dprefix=/usr/local/net-snmp -Dusethreads -Uversiononly
+
+ps -ef|grep snmpd
+service snmpd status
+service snmpd stop/start
+
+/usr/local/net-snmp/bin/snmpd -c /usr/local/net-snmp/etc/snmpd.conf
+
+
+openssl通过配置安装到指定文件目录
+./config shared --prefix=/usr/local/openssl-1.0.1e
+
+防火墙开启8080端口
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+firewall-cmd --reload
+
+杀死占用的端口进程
+fuser -k 9999/tcp 
+
+查看端口占用
+lsof -i:8080
+
+卸载jdk
+rpm -qa | grep java  
+rpm -e --nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64
+
+
+cat /etc/issue 查看版本
+cat /proc/version 
+cat /etc/redhat-release 查看CentOS版本
+.uname -a
+
+free -h命令查看内存使用情况和cpu使用的情况
+
+查看key
+gmssl ec -in sm2key.pem -text
+
+
