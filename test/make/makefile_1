@@ -1,0 +1,67 @@
+CC = gcc
+OO = g++
+#DEFS = -DDEV_NO_CLIENT -DDEV_MASTER
+TARGET = libappsafekb_x86.so
+
+ARCH:=$(shell uname -m)
+BIT32:=i686
+BIT64:=x86_64
+
+
+ifeq ($(ARCH),$(BIT64))
+	TARGET = libappsafekb_x64.so
+else
+	TARGET = libappsafekb_x86.so
+endif
+
+CFLAGS   = -fPIC -static-libgcc -Wl,-whole-archive -lm -Wl,-whole-archive -lstdc++ -Wl,-whole-archive -lc -Wl,-no-whole-archive -Wl,-O1 -shared
+CCFLAGS  = -pipe -fvisibility=hidden -O2 -Wall -W -fPIC $(DEFS)
+CXXFLAGS = 
+OBJDIR = objs
+
+
+INCLUDE += -I ./core -I./ 
+INCLUDE += -I /home/xl/tool/openssl-1.0.1e
+INCLUDE += -I /home/xl/tool/openssl-1.0.1e/include
+LIBS+= /usr/local/ssl/lib/libcrypto.a
+
+
+CPPLIST = $(wildcard *.cpp ./core/*.cpp)    			# get cpp file list
+CLIST = $(wildcard *.c ./core/*.c)					# get c file list
+CPPNAME = $(patsubst %.c, %, $(CLIST)) 				# get corresponding target file
+NOBJS=$(notdir $(OBJS))
+OBJECTDIR=objs
+
+OBJ_DIR = objs
+#OBJS = $(addprefix $(OBJ_DIR)/,$(patsubst %.c,%.o,$(notdir $(CLIST))))
+#OBJS = $(patsubst %.c,%.o, $(notdir $(CLIST)))
+OBJS = $(patsubst %.c,%.o, $(CLIST))
+#DIRS = $(shell find $(SRC_PATH) -maxdepth 3 -type d)
+
+DIRS = ./core .
+SRCS_C += $(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
+OBJS_C = $(patsubst %.c, %.o, $(SRCS_C))
+
+VPATH = core 
+OBJECTS = $(OBJS_C)
+
+all : $(OBJECTS) 
+	$(OO) $(CFLAGS) -o $(TARGET) $(OBJECTDIR)/*.o $(LIBS)
+	
+$(OBJECTDIR) :
+	mkdir $(OBJECTDIR)
+
+%.o : %.c $(OBJECTDIR) 
+	$(CC) $(INCLUDE) $(CCFLAGS) -c $< -o $(OBJECTDIR)/$(notdir $@)
+
+clean:
+	rm -f $(TARGET)
+	rm -f $(OBJECTDIR)/*.o $(OBJECTDIR)/core/*.o
+
+info:$(CLIST)
+	@echo $(basename $(CLIST))
+	@echo $(OBJS)
+
+ls: 
+	@echo $(OBJS_C)
+
