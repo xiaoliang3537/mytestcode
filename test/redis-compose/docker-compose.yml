@@ -1,0 +1,45 @@
+version: "3.0" 
+services:
+  redis_master:
+   image: redis
+   container_name: redis_master
+   command: redis-server /etc/redis/redis.conf
+   ports:
+    - "6379:6379"
+   volumes:
+    - "./data:/data"
+    - "./redis_6379.conf:/etc/redis/redis.conf"
+   networks:
+    mynetwork:
+     ipv4_address: 172.18.0.11
+
+  redis_slave1:
+   image: redis
+   container_name: redis_slave1
+   command: redis-server /etc/redis/redis.conf
+   ports:
+    - "6380:6379"
+   volumes:
+    - "./data_6380:/data"
+    - "./redis_6380.conf:/etc/redis/redis.conf"
+   networks:
+    mynetwork:
+     ipv4_address: 172.18.0.12
+     
+  redis_slave2:
+   image: redis
+   container_name: redis_slave2
+   command: redis-server /etc/redis/redis.conf
+   ports:
+    - "6381:6379"
+   volumes:
+    - "./data_6381:/data"
+    - "./redis_6381.conf:/etc/redis/redis.conf"
+   networks:
+    mynetwork:
+     ipv4_address: 172.18.0.13
+
+networks:
+   mynetwork:
+    external: true
+
